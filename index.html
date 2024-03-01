@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Health In America</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/style.css">
+<style>
+  @media (max-width: 600px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<script src="js/d3.v6.min.js"></script>
+
+<div class="header rounded">
+  <h2>Health in the USA, by Elijah Hoorman</h2>
+</div>
+
+<div class="row">
+  <div class="column side rounded">
+    <h1 id="vs1">Poverty Rate v. Air Quality</h1>
+    <h2>Distributions Charts</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div id="options" class="column side rounded">
+    <h3><b>Options:</b></h3>
+    <form action="" id="dataSets">
+      <p>Data Set 1:</p>
+      <div id="dropdown1" class="custom-select" style="width:200px;">
+        <select id="dataSet1">
+          <option value="0">Select Data Set 1:</option>
+          <option value="poverty_perc">Poverty Rate %</option>
+          <option value="median_household_income">Median Household Income</option>
+          <option value="education_less_than_high_school_percent">% Less Than High School</option>
+          <option value="air_quality">Air Quality</option>
+          <option value="park_access">Park Access</option>
+          <option value="percent_inactive">% Inactive</option>
+          <option value="percent_smoking">% Smoking</option>
+          <option value="elderly_percentage">% Elderly</option>
+          <option value="number_of_hospitals">Number of Hospitals</option>
+          <option value="number_of_primary_care_physicians">Number of Primary Care Physicians</option>
+          <option value="percent_no_heath_insurance">% No Health Insurance</option>
+          <option value="percent_high_blood_pressure">% High Blood Pressure</option>
+          <option value="percent_coronary_heart_disease">% Coronary Heart Disease</option>
+          <option value="percent_stroke">% Stroke</option>
+          <option value="percent_high_cholesterol">% High Cholesterol</option>
+        </select>
+      </div>
+      <p>Data Set 2:</p>
+      <div id="dropdown2" class="custom-select" style="width:200px;">
+        <select id="dataSet2">
+          <option value="0">Select Data Set 2:</option>
+          <option value="poverty_perc">Poverty Rate %</option>
+          <option value="median_household_income">Median Household Income</option>
+          <option value="education_less_than_high_school_percent">% Less Than High School</option>
+          <option value="air_quality">Air Quality</option>
+          <option value="park_access">Park Access</option>
+          <option value="percent_inactive">% Inactive</option>
+          <option value="percent_smoking">% Smoking</option>
+          <option value="elderly_percentage">% Elderly</option>
+          <option value="number_of_hospitals">Number of Hospitals</option>
+          <option value="number_of_primary_care_physicians">Number of Primary Care Physicians</option>
+          <option value="percent_no_heath_insurance">% No Health Insurance</option>
+          <option value="percent_high_blood_pressure">% High Blood Pressure</option>
+          <option value="percent_coronary_heart_disease">% Coronary Heart Disease</option>
+          <option value="percent_stroke">% Stroke</option>
+          <option value="percent_high_cholesterol">% High Cholesterol</option>
+        </select>
+      </div>
+      <button class="button" type="submit">Submit</button>
+    </form>
+    <p id="help"><br>* <strong>Data Set 1</strong> will be used for the left Histogram and left Choropleth graph,
+      as well as the X-axis on the Scatterplot. <br><strong>* Data Set 2</strong> will be used for
+      the right Histogram and right Choropleth graph, and the Y-axis on the Scatterplot.
+    </p>
+  </div>
+  <div id="main1" class="column half"></div>
+  <div id="main2" class="column half"></div>
+</div>
+
+<div class="row">
+  <div class="column side rounded">
+    <h1 id="vs2">Poverty Rate v. Air Quality</h1>
+    <h2>Correlation Plot</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column sideScatter"></div>
+  <div id="scatter" class="column half"></div>
+  <div class="column sideScatter"></div>
+</div>
+
+<div class="row">
+  <div class="column side rounded">
+    <h1 id="vs3">Poverty Rate v. Air Quality</h1>
+    <h2>Spatial Distributions</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column half">
+    <h2 id="vs41">Poverty Rate</h2>
+  </div>
+  <div class="column half">
+    <h2 id="vs42">Air Quality</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div id="choro1" class="column half"></div>
+  <div id="choro2" class="column half"></div>
+</div>
+
+<div class="footer rounded">
+  <p>Data Visualization Project 1, Elijah Hoorman</p>
+</div>
+
+<div id="tooltip"></div>
+
+<script src="js/processData.js"></script>
+<script src="js/topojson.v3.js"></script>
+<script src="js/displayNames.js"></script>
+<script src="js/choroplethMap.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

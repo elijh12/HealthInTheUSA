@@ -1,0 +1,236 @@
+:not(#tooltip) {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #f4f0ec;
+}
+
+h1 {
+    padding-left: 30px;
+    text-align: center;
+}
+
+h2 {
+    padding-left: 30px;
+    text-align: center;
+}
+
+.rounded {
+    border-radius: 25px;
+}
+
+.border {
+    border: 2px solid black;
+}
+
+#options {
+    font-size: 15px;
+    padding-left: 10px;
+    padding-top: 1px;
+}
+
+#options h3 {
+  font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#options p {
+  margin-bottom: 5px;
+}
+
+#help {
+  font-size: 14px;
+}
+
+.button {
+  background-color: #49970e; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #33680a; /* Green */
+  color: white;
+  cursor: pointer;
+}
+
+/* Style the header */
+.header {
+    background-color: #49970e;
+    padding: 15px;
+    text-align: center;
+    font-size: 25px;
+}
+
+/* Container for flexboxes */
+.row {
+    display: -webkit-flex;
+    display: flex;
+}
+
+/* Create three unequal columns that sits next to each other 
+.column {
+    padding-left: 10px;
+}*/
+
+#tooltip {
+    position: absolute;
+    display: none;
+    background: #fff;
+    box-shadow: 3px 3px 3px 0px rgb(92 92 92 / 0.5);
+    border: 1px solid #ddd;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px;
+    min-width: 160px;
+    color: #333;
+  }
+  .tooltip-title {
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  #tooltip ul {
+    margin: 5px 0 0 0;
+    padding-left: 20px;
+  }
+
+/* Left and right column */
+.column.side {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background-color: #C9E3AC;
+}
+
+.column.sideScatter {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background-color: #f4f0ec;
+}
+
+/* Middle column */
+.column.middle {
+    -webkit-flex: 6;
+    -ms-flex: 6;
+    flex: 6;
+    background-color: #f4f0ec;
+}
+
+/* Half column */
+.column.half {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #f4f0ec;
+}
+
+/* Style the footer */
+.footer {
+    background-color: #EA9010;
+    padding: 10px;
+    text-align: center;
+}
+  
+.background {
+    fill: none;
+    pointer-events: all;
+}
+
+#states {
+fill: #aaa;
+}
+
+#states .active {
+display:none;
+}
+
+#state-borders {
+fill: none;
+stroke: #fff;
+stroke-width: 1.5px;
+stroke-linejoin: round;
+stroke-linecap: round;
+pointer-events: none;
+}
+
+.county-boundary {
+fill: gray;
+stroke: #fff;
+stroke-width: .5px;
+}
+
+.county-boundary:hover, .state:hover {
+fill: orange;
+}
+
+  .custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element: */
+  }
+  
+  .select-selected {
+    background-color: #49970e;
+    border-radius: 12px;;
+  }
+  
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background-color: #49970e;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
